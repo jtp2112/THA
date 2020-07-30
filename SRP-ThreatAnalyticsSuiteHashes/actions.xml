@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<remv1:Remediation-Plugin xmlns:remv1="RemediationVersion1.xsd" Name="Threat Hunting Hash Analysis">
+<!--  Virus Total Provider Actions Configurations -->
+<!-- Action for Virus Total Validation, Forcing LogRhythm Case with Alarm Evidence-->
+	<remv1:Action Name="Virus Total Hash Analysis Case and Alarm" Command="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe">
+		<remv1:ConstantParameter Name="Script" Switch="-file SRP-ThreatAnalyticsSuiteHashes.ps1" Order="1" />
+		<remv1:StringParameter Name="ConfigFile" Switch="-ConfigFile " Order="2" />
+		<remv1:StringParameter Name="Hash Value" Switch="-HashValue " Order="3" />
+		<remv1:StringParameter Name="Alarm ID" Switch="-AlarmID " Order="4" />
+        <remv1:ConstantParameter Name="Provider" Switch="-VT " Order="5" />
+        <remv1:ConstantParameter Name="Force Case" Switch="-ForceCase " Order="6" />
+	</remv1:Action>
+
+<!-- Action for Virus Total Validation, Forcing LogRhythm Case without Alarm Evidence-->
+	<remv1:Action Name="Virus Total Hash Analysis Force Case" Command="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe">
+		<remv1:ConstantParameter Name="Script" Switch="-file SRP-ThreatAnalyticsSuiteHashes.ps1" Order="1" />
+		<remv1:StringParameter Name="ConfigFile" Switch="-ConfigFile " Order="2" />
+		<remv1:StringParameter Name="Hash Value" Switch="-HashValue " Order="3" />
+        <remv1:ConstantParameter Name="Provider" Switch="-VT " Order="4" />
+        <remv1:ConstantParameter Name="Force Case" Switch="-ForceCase " Order="5" />
+	</remv1:Action>
+
+<!-- Action for Virus Total Validation, Case on Infection with Alarm Evidence-->
+	<remv1:Action Name="Virus Total Hash Analysis Alarm" Command="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe">
+		<remv1:ConstantParameter Name="Script" Switch="-file SRP-ThreatAnalyticsSuiteHashes.ps1" Order="1" />
+		<remv1:StringParameter Name="ConfigFile" Switch="-ConfigFile " Order="2" />
+		<remv1:StringParameter Name="Hash Value" Switch="-HashValue " Order="3" />
+		<remv1:StringParameter Name="Alarm ID" Switch="-AlarmID " Order="4" />
+        <remv1:ConstantParameter Name="Provider" Switch="-VT " Order="5" />
+	</remv1:Action>
+
+<!-- Action for Virus Total Validation, Case on Infection without Alarm Evidence-->
+	<remv1:Action Name="Virus Total Hash Analysis" Command="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe">
+		<remv1:ConstantParameter Name="Script" Switch="-file SRP-ThreatAnalyticsSuiteHashes.ps1" Order="1" />
+		<remv1:StringParameter Name="ConfigFile" Switch="-ConfigFile " Order="2" />
+		<remv1:StringParameter Name="Hash Value" Switch="-HashValue " Order="3" />
+        <remv1:ConstantParameter Name="Provider" Switch="-VT " Order="4" />
+	</remv1:Action>
+
+<!--  OTX Provider Actions Configurations -->
+<!-- Action for OTX Validation, Forcing LogRhythm Case with Alarm Evidence-->
+	<remv1:Action Name="OTX Hash Analysis Case and Alarm" Command="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe">
+		<remv1:ConstantParameter Name="Script" Switch="-file SRP-ThreatAnalyticsSuiteHashes.ps1" Order="1" />
+		<remv1:StringParameter Name="ConfigFile" Switch="-ConfigFile " Order="2" />
+		<remv1:StringParameter Name="Hash Value" Switch="-HashValue " Order="3" />
+		<remv1:StringParameter Name="Alarm ID" Switch="-AlarmID " Order="4" />
+        <remv1:ConstantParameter Name="Provider" Switch="-OTX " Order="5" />
+        <remv1:ConstantParameter Name="Force Case" Switch="-ForceCase " Order="6" />
+	</remv1:Action>
+
+<!-- Action for OTX Validation, Forcing LogRhythm Case without Alarm Evidence-->
+	<remv1:Action Name="OTX Hash Analysis Force Case" Command="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe">
+		<remv1:ConstantParameter Name="Script" Switch="-file SRP-ThreatAnalyticsSuiteHashes.ps1" Order="1" />
+		<remv1:StringParameter Name="ConfigFile" Switch="-ConfigFile " Order="2" />
+		<remv1:StringParameter Name="Hash Value" Switch="-HashValue " Order="3" />
+        <remv1:ConstantParameter Name="Provider" Switch="-OTX " Order="4" />
+        <remv1:ConstantParameter Name="Force Case" Switch="-ForceCase " Order="5" />
+	</remv1:Action>
+
+<!-- Action for OTX Validation, Case on Infection with Alarm Evidence-->
+	<remv1:Action Name="OTX Hash Analysis Alarm" Command="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe">
+		<remv1:ConstantParameter Name="Script" Switch="-file SRP-ThreatAnalyticsSuiteHashes.ps1" Order="1" />
+		<remv1:StringParameter Name="ConfigFile" Switch="-ConfigFile " Order="2" />
+		<remv1:StringParameter Name="Hash Value" Switch="-HashValue " Order="3" />
+		<remv1:StringParameter Name="Alarm ID" Switch="-AlarmID " Order="4" />
+        <remv1:ConstantParameter Name="Provider" Switch="-OTX " Order="5" />
+	</remv1:Action>
+
+<!-- Action for OTX Validation, Case on Infection without Alarm Evidence-->
+	<remv1:Action Name="OTX Hash Analysis" Command="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe">
+		<remv1:ConstantParameter Name="Script" Switch="-file SRP-ThreatAnalyticsSuiteHashes.ps1" Order="1" />
+		<remv1:StringParameter Name="ConfigFile" Switch="-ConfigFile " Order="2" />
+		<remv1:StringParameter Name="Hash Value" Switch="-HashValue " Order="3" />
+        <remv1:ConstantParameter Name="Provider" Switch="-OTX " Order="4" />
+	</remv1:Action>
+
+<!--  Malwares Provider Actions Configurations -->
+<!-- Action for Malwares Validation, Forcing LogRhythm Case with Alarm Evidence-->
+	<remv1:Action Name="Malwares Hash Analysis Case and Alarm" Command="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe">
+		<remv1:ConstantParameter Name="Script" Switch="-file SRP-ThreatAnalyticsSuiteHashes.ps1" Order="1" />
+		<remv1:StringParameter Name="ConfigFile" Switch="-ConfigFile " Order="2" />
+		<remv1:StringParameter Name="Hash Value" Switch="-HashValue " Order="3" />
+		<remv1:StringParameter Name="Alarm ID" Switch="-AlarmID " Order="4" />
+        <remv1:ConstantParameter Name="Provider" Switch="-MW " Order="5" />
+        <remv1:ConstantParameter Name="Force Case" Switch="-ForceCase " Order="6" />
+	</remv1:Action>
+
+<!-- Action for Malwares Validation, Forcing LogRhythm Case without Alarm Evidence-->
+	<remv1:Action Name="Malwares Hash Analysis Force Case" Command="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe">
+		<remv1:ConstantParameter Name="Script" Switch="-file SRP-ThreatAnalyticsSuiteHashes.ps1" Order="1" />
+		<remv1:StringParameter Name="ConfigFile" Switch="-ConfigFile " Order="2" />
+		<remv1:StringParameter Name="Hash Value" Switch="-HashValue " Order="3" />
+        <remv1:ConstantParameter Name="Provider" Switch="-MW " Order="4" />
+        <remv1:ConstantParameter Name="Force Case" Switch="-ForceCase " Order="5" />
+	</remv1:Action>
+
+<!-- Action for Malwares Validation, Case on Infection with Alarm Evidence-->
+	<remv1:Action Name="Malwares Hash Analysis Alarm" Command="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe">
+		<remv1:ConstantParameter Name="Script" Switch="-file SRP-ThreatAnalyticsSuiteHashes.ps1" Order="1" />
+		<remv1:StringParameter Name="ConfigFile" Switch="-ConfigFile " Order="2" />
+		<remv1:StringParameter Name="Hash Value" Switch="-HashValue " Order="3" />
+		<remv1:StringParameter Name="Alarm ID" Switch="-AlarmID " Order="4" />
+        <remv1:ConstantParameter Name="Provider" Switch="-MW " Order="5" />
+	</remv1:Action>
+
+<!-- Action for Malwares Validation, Case on Infection without Alarm Evidence-->
+	<remv1:Action Name="Malwares Hash Analysis" Command="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe">
+		<remv1:ConstantParameter Name="Script" Switch="-file SRP-ThreatAnalyticsSuiteHashes.ps1" Order="1" />
+		<remv1:StringParameter Name="ConfigFile" Switch="-ConfigFile " Order="2" />
+		<remv1:StringParameter Name="Hash Value" Switch="-HashValue " Order="3" />
+        <remv1:ConstantParameter Name="Provider" Switch="-MW " Order="4" />
+	</remv1:Action>
+
+<!--  All Providers Actions Configurations -->
+<!-- Action for All Providers Validation, Forcing LogRhythm Case with Alarm Evidence-->
+	<remv1:Action Name="All Providers Hash Analysis Case and Alarm" Command="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe">
+		<remv1:ConstantParameter Name="Script" Switch="-file SRP-ThreatAnalyticsSuiteHashes.ps1" Order="1" />
+		<remv1:StringParameter Name="ConfigFile" Switch="-ConfigFile " Order="2" />
+		<remv1:StringParameter Name="Hash Value" Switch="-HashValue " Order="3" />
+		<remv1:StringParameter Name="Alarm ID" Switch="-AlarmID " Order="4" />
+        <remv1:ConstantParameter Name="Provider" Switch="-ALL " Order="5" />
+        <remv1:ConstantParameter Name="Force Case" Switch="-ForceCase " Order="6" />
+	</remv1:Action>
+
+<!-- Action for All Providers Validation, Forcing LogRhythm Case without Alarm Evidence-->
+	<remv1:Action Name="All Providers Hash Analysis Force Case" Command="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe">
+		<remv1:ConstantParameter Name="Script" Switch="-file SRP-ThreatAnalyticsSuiteHashes.ps1" Order="1" />
+		<remv1:StringParameter Name="ConfigFile" Switch="-ConfigFile " Order="2" />
+		<remv1:StringParameter Name="Hash Value" Switch="-HashValue " Order="3" />
+        <remv1:ConstantParameter Name="Provider" Switch="-ALL " Order="4" />
+        <remv1:ConstantParameter Name="Force Case" Switch="-ForceCase " Order="5" />
+	</remv1:Action>
+
+<!-- Action for All Providers Validation, Case on Infection with Alarm Evidence-->
+	<remv1:Action Name="All Providers Hash Analysis Alarm" Command="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe">
+		<remv1:ConstantParameter Name="Script" Switch="-file SRP-ThreatAnalyticsSuiteHashes.ps1" Order="1" />
+		<remv1:StringParameter Name="ConfigFile" Switch="-ConfigFile " Order="2" />
+		<remv1:StringParameter Name="Hash Value" Switch="-HashValue " Order="3" />
+		<remv1:StringParameter Name="Alarm ID" Switch="-AlarmID " Order="4" />
+        <remv1:ConstantParameter Name="Provider" Switch="-ALL " Order="5" />
+	</remv1:Action>
+
+<!-- Action for All Providers Validation, Case on Infection without Alarm Evidence-->
+	<remv1:Action Name="All Providers Hash Analysis" Command="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe">
+		<remv1:ConstantParameter Name="Script" Switch="-file SRP-ThreatAnalyticsSuiteHashes.ps1" Order="1" />
+		<remv1:StringParameter Name="ConfigFile" Switch="-ConfigFile " Order="2" />
+		<remv1:StringParameter Name="Hash Value" Switch="-HashValue " Order="3" />
+        <remv1:ConstantParameter Name="Provider" Switch="-ALL " Order="4" />
+	</remv1:Action>
+</remv1:Remediation-Plugin>
